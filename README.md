@@ -1,7 +1,9 @@
 # Flow chapter 1 is completed
 
-✅ create a basic database \n
+✅ create a basic database
+
 ✅ create a basic frontend with next js library
+
 
 Folder directory
 
