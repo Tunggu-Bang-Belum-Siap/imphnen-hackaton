@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # Service 1: Database MySQL
+  db:
+    image: mysql:8.0
+    container_name: hackathon_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: umkm_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      # Magic trick: Otomatis import SQL saat pertama kali jalan!
+      - ./backend/db.sql:/docker-entrypoint-initdb.d/init.sql 
+
+  # Service 2: Backend (PHP Native)
+  backend:
+    build: ./backend
+    container_name: hackathon_backend
+    ports:
+      - "8080:80" # Akses di localhost:8080
+    volumes:
+      - ./backend:/var/www/html # Hot-reload: edit file di laptop, langsung berubah di container
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: user
+      DB_PASS: password
+      DB_NAME: umkm_db
+
+  # Service 3: Frontend (Next.js)
+  frontend:
+    build: ./frontend
+    container_name: hackathon_frontend
+    ports:
+      - "3000:3000" # Akses di localhost:3000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules # Mencegah conflict node_modules laptop vs container
+    environment:
+      # PENTING: Kalau fetch dari Client (Browser/HP), tembak ke localhost:8080
+      # Kalau fetch dari Server Component, tembak ke http://backend:80
+      NEXT_PUBLIC_API_URL: http://localhost:8080 
+    command: npm run dev 
+
+volumes:
+  db_data:
