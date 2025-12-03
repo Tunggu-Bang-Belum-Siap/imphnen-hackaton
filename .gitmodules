@@ -7,3 +7,6 @@
 [submodule "mobile"]
 	path = mobile
 	url = https://github.com/hylmithecoder/inventory_system_with_ai_agentic_mobile
+[submodule "tools/helper_build/third_party/ftxui"]
+	path = tools/helper_build/third_party/ftxui
+	url = https://github.com/ArthurSonzogni/FTXUI.git
