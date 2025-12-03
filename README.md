@@ -70,6 +70,16 @@ imphnen-hackathon/
 
 ## 🏁 Getting Started
 
+Clone All Submodules Repositories
+```
+git submodule update --remote --recursive
+```
+
+Now You Just Run To Choice You Desire Already Platform
+```
+./build_helper.sh
+```
+
 ### Prerequisites
 
 - **Node.js** (v20+ recommended) & npm/yarn/bun
