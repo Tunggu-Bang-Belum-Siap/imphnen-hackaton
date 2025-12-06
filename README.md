@@ -137,7 +137,7 @@ Now You Just Run To Choice You Desire Already Platform
 
 MIT License
 
-Copyright (c) 2024 Inventory System with Agentic AI
+Copyright (c) 2025 Inventory System with Agentic AI
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
