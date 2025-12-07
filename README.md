@@ -30,6 +30,11 @@ This project is a hackathon submission (`imphnen-hackathon`) that provides a rob
 - **Language:** C#
 - **Platform:** Cross-platform (Android, iOS, Windows, macOS)
 
+### Helper Build
+- **Language:** C++
+- **Platform:** Dekstop Only (Windows, Linux, macOS)
+- **Library:** [ftxui](https://github.com/ArthurSonzogni/FTXUI/tree/main)
+
 ## 📂 Project Structure
 
 ```
