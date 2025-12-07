@@ -17,12 +17,11 @@ string HelperBuild::BuildFrontend(const string& root) {
     if (!FolderExists(path)) 
         return "Frontend folder not found.";
 
-    RunCmd("cp " + path + "/.env.example " + path + "/.env");
     #if __win32
         return RunCmd("cd " + path + " && docker build -t frontend_app .");
     #endif
 
-    return RunCmd("cd " + path + " && sudo docker build -t frontend_app .");
+    return RunCmd("cd " + path + " && mv .env.example .env && sudo docker build -t frontend_app .");
 }
 
 string HelperBuild::BuildBackend(const string& root) {
