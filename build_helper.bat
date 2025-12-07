@@ -1,9 +1,9 @@
 @echo off
 git submodule update --init --recursive
 
-cd tools\helper_builder
+cd tools\helper_build
 
-if not exist build-helper (
+if not exist helper_build (
     cmake -B build -S .
     cmake --build build
     copy build\HelperProjectBuild.exe .
