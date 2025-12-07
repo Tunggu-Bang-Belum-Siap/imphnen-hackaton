@@ -76,16 +76,6 @@ imphnen-hackathon/
 
 ## 🏁 Getting Started
 
-Clone All Submodules Repositories
-```
-git submodule update --remote --recursive
-```
-
-Now You Just Run To Choice You Desire Already Platform
-```
-./build_helper.sh
-```
-
 ### Prerequisites
 
 - **GNU/Clang**
@@ -94,6 +84,13 @@ Now You Just Run To Choice You Desire Already Platform
 - **PHP** (v8.0+ recommended)
 - **MySQL** Server
 - **.NET SDK** (v10 recommended) (for mobile development)
+
+### Use Build Helper
+
+You Just Run To Choice You Desire Already Platform
+```
+./build_helper.sh
+```
 
 ### 1. Database Setup
 
