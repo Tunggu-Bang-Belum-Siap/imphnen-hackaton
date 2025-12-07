@@ -1,5 +1,5 @@
 #!/bin/bash
-git submodule update --remote --recursive
+git submodule update --init --recursive
 
 cd tools/helper_builder
 
