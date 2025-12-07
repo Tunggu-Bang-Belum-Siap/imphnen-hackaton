@@ -92,7 +92,7 @@ Now You Just Run To Choice You Desire Already Platform
 - **Node.js** (v20+ recommended) & npm/yarn/bun
 - **PHP** (v8.0+ recommended)
 - **MySQL** Server
-- **.NET SDK (Recommended .NET 10)** (for mobile development)
+- **.NET SDK** (v10 recommended) (for mobile development)
 
 ### 1. Database Setup
 
