@@ -9,6 +9,7 @@ This project is a hackathon submission (`imphnen-hackathon`) that provides a rob
 - **Frontend:** A modern Next.js 16 (React 19) application with TypeScript and Tailwind CSS 4 for a responsive user interface.
 - **Mobile:** A .NET MAUI cross-platform mobile application.
 - **Database:** MySQL for data persistence.
+- **Helper Build:** A program with C++ to help build this project
 
 ## 🛠 Tech Stack
 
