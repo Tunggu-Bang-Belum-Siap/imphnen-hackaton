@@ -38,7 +38,8 @@ string HelperBuild::BuildBackend(const string& root) {
 }
 
 string HelperBuild::BuildWeb(const string& root) {
-    return RunCmd("docker compose up -d --build");
+    string frontendPath = root + "/frontend";
+    return RunCmd("mv " + frontendPath + "/.env.example " + frontendPath + "/.env && cd " + root + " && docker compose up -d --build");
 }
 
 string HelperBuild::BuildMobile(const string& root) {
