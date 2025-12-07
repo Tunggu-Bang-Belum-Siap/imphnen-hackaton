@@ -82,10 +82,12 @@ Now You Just Run To Choice You Desire Already Platform
 
 ### Prerequisites
 
+- **GNU/Clang**
+- **CMake**
 - **Node.js** (v20+ recommended) & npm/yarn/bun
 - **PHP** (v8.0+ recommended)
 - **MySQL** Server
-- **.NET SDK** (for mobile development)
+- **.NET SDK (Recommended .NET 10)** (for mobile development)
 
 ### 1. Database Setup
 
