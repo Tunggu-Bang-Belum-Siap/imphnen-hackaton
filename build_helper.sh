@@ -1,4 +1,6 @@
 #!/bin/bash
+git submodule update --remote --recursive
+
 cd tools/helper_builder
 
 if [ ! -f build-helper ]; then

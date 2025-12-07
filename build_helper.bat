@@ -1,4 +1,6 @@
 @echo off
+git submodule update --remote --recursive
+
 cd tools\helper_builder
 
 if not exist build-helper (
