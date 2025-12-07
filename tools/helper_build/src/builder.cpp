@@ -17,7 +17,11 @@ string HelperBuild::BuildFrontend(const string& root) {
     if (!FolderExists(path)) 
         return "Frontend folder not found.";
 
-    return RunCmd("cd " + path + " && docker build -t frontend_app .");
+    #if __win32
+        return RunCmd("cd " + path + " && docker build -t frontend_app .");
+    #endif
+
+    return RunCmd("cd " + path + " && sudo docker build -t frontend_app .");
 }
 
 string HelperBuild::BuildBackend(const string& root) {
@@ -26,7 +30,11 @@ string HelperBuild::BuildBackend(const string& root) {
     if (!FolderExists(path)) 
         return "Backend folder not found.";
 
-    return RunCmd("cd " + path + " && docker build -t backend_app .");
+    #if __win32
+        return RunCmd("cd " + path + " && docker build -t backend_app .");
+    #endif
+    
+    return RunCmd("cd " + path + " && sudo docker build -t backend_app .");
 }
 
 string HelperBuild::BuildWeb(const string& root) {

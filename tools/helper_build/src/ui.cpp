@@ -1,16 +1,16 @@
 #include <ui.hpp>
 #include <builder.hpp>
 
-void HelperBuild::RunUI(const std::string& root_path) {
+void HelperBuild::RunUI(const string& root_path) {
     using namespace ftxui;
 
     auto screen = ScreenInteractive::Fullscreen();
 
-    std::string logs = "Ready.";
+    string logs = "Ready.";
     int selected = 0;
     int selected_run = 0;
 
-    std::vector<std::string> menu_entries = {
+    vector<string> menu_entries = {
         "Build Web (Frontend + Backend)",
         "Build Frontend",
         "Build Backend",
