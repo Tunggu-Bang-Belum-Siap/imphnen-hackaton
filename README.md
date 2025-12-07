@@ -89,7 +89,7 @@ Now You Just Run To Choice You Desire Already Platform
 ### Prerequisites
 
 - **GNU/Clang**
-- **CMake**
+- **CMake** (v3.24 minimum)
 - **Node.js** (v20+ recommended) & npm/yarn/bun
 - **PHP** (v8.0+ recommended)
 - **MySQL** Server
